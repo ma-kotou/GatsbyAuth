@@ -1,18 +1,12 @@
 /**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: `GatsbyAuth`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
-  plugins: [
-    {
-      resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        resetCss: true,
-        inUsingColorMode: true,
-      }
-    }
-  ],
+  plugins: [],
 }
