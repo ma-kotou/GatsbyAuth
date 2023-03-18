@@ -1,7 +1,9 @@
 import React from "react"
 import { navigate } from "gatsby"
 import { handleLogin, isLoggedIn } from "../services/auth"
+import { Flex, Box, FormControl, FormLabel, Input, Stack, Heading, Button, Text, useColorModeValue } from "@chakra-ui/react"
 
+//Login
 class Login extends React.Component {
   state = {
     username: ``,
@@ -25,30 +27,68 @@ class Login extends React.Component {
     }
 
     return (
-      <>
-        <h1>Log in</h1>
-        <form
-          method="post"
-          onSubmit={event => {
-            this.handleSubmit(event)
-            navigate(`/app/profile`)
-          }}
-        >
-          <label>
-            Username
-            <input type="text" name="username" onChange={this.handleUpdate} />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              onChange={this.handleUpdate}
-            />
-          </label>
-          <input type="submit" value="Log In" />
-        </form>
-      </>
+      <Flex
+        minH={'calc(100vh - 60px)'}
+        align={'center'}
+        justify={'center'}
+        bg={'gray.50'}>
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+          <Box
+            round={'lg'}
+            boxShadow={'lg'}
+            p={8}>
+            <Stack spacing={4}>
+            <Heading as='h2' fontSize={'4xl'}>Log in</Heading>
+            <form
+              method="post"
+              onSubmit={event => {
+                this.handleSubmit(event)
+                navigate(`/app/profile`)
+              }}
+            >
+              <FormControl id="username">
+                <FormLabel m={0}>
+                  Username
+                  <Input
+                    type="text"
+                    name="username"
+                    onChange={this.handleUpdate}
+                    />
+                </FormLabel>
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel m={0}>
+                  Password
+                  <Input
+                    type="password"
+                    name="password"
+                    onChange={this.handleUpdate}
+                  />
+                </FormLabel>
+              </FormControl>
+              <Stack spacing={10}>
+                <Stack
+                  direction={{ base: 'column', sm: 'row' }}
+                  align={'start'}
+                  justify={'space-between'}>
+                  </Stack>
+              </Stack>
+              <Button
+                width={'100%'}
+                mt={4}
+                bg={'blue.400'}
+                size={'lg'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500'
+                }}>
+                  Sign in
+                </Button>
+            </form>
+            </Stack>
+          </Box>
+        </Stack>
+      </Flex>
     )
   }
 }
