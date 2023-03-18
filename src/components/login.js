@@ -74,6 +74,8 @@ class Login extends React.Component {
                   </Stack>
               </Stack>
               <Button
+                type="password"
+                onChange={this.handleUpdate}
                 width={'100%'}
                 mt={4}
                 bg={'blue.400'}
