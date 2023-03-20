@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
 import Footer from './Footer'
-import { sanitize } from 'sanitize.css'
 import { Global, css } from '@emotion/react'
 import { val } from './variable.js'
-import Header from './Header'
 import ScrollDown from './ScrollDown'
+import NavBar from "./nav-bar"
 
 
 const Layout = ({ children }) => {
@@ -12,7 +11,7 @@ const Layout = ({ children }) => {
     <>
       <Global styles={styles} />
         <main>
-          <Header/>
+          <NavBar/>
           {children}
           <ScrollDown />
         </main>
@@ -24,8 +23,6 @@ const Layout = ({ children }) => {
 /* GlobalStyle */
 
 const styles = css`
-  ${ sanitize }
-
   body {
   color: ${val.black};
   letter-spacing: .05em;
@@ -35,6 +32,7 @@ const styles = css`
   main{
     background: ${val.white};
     position: relative;
+    min-height: calc(100vh - 60px);
   }
 
   a {
