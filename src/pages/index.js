@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { getUser, isLoggedIn } from "../services/auth"
-import { ChakraProvider } from "@chakra-ui/gatsby-plugin"
-
 import Layout from "../components/layout"
 
 export default function Home() {
@@ -22,6 +20,6 @@ export default function Home() {
           </>
           )}
         </p>
-    </Layout>
+      </Layout>
   )
 }
