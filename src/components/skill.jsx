@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import styled from '@emotion/styled'
 import { val } from './variable.js'
 import Title from "./Title"
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Container from './Container'
 
 const Skill = () => {

@@ -1,7 +1,28 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout } from "../services/auth"
-import { val } from "./variable"
+import {
+  Box,
+  Flex,
+  Text,
+  IconButton,
+  Button,
+  Stack,
+  Collapse,
+  Icon,
+  Popover,
+  useColorModeValue,
+  useBreakpointValue,
+  useDisclosure,
+  } from "@chakra-ui/react"
+
+  import {
+    HamburgerIcon,
+    CloseIcon,
+    ChevronDownIcon,
+    ChevronRightIcon,
+  } from "@chakra-ui/icons";
+
 
 
 export default function NavBar() {
@@ -17,8 +38,19 @@ export default function NavBar() {
 
 
   return (
-    <Header>
-        <Logo
+    <Box as='header'>
+      <Flex
+        bg={useColorModeValue('white','gray.800')}
+        color={useColorModeValue('gray.600',' white')}
+        minH={'60px'}
+        py={{ base: 2}}
+        px={{ base: 4}}
+        borderBottom={1}
+        borderStyle={'solid'}
+        borderColor={useColorModeValue('gray.200','gray.900')}
+        align={'center'}
+        >
+        <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}>
@@ -30,7 +62,7 @@ export default function NavBar() {
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
               />
-        </Logo>
+        </Flex>
         <Flex flex={{ base:1 }} justify={{ base: 'center', md: 'start' }}>
           <span>{greetingMessage}</span>
         </Flex>
@@ -54,13 +86,7 @@ export default function NavBar() {
           </Button>
         ) : null}
       </nav>
-    </Header>
+      </Flex>
+    </Box>
   )
 }
-
-const Header = styled.header`
-  height: ${val.s80};
-  display: flex;
-  justify-content: space-between;
-  background: #fff;
-`
