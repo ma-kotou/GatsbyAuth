@@ -18,7 +18,7 @@ export default function NavBar() {
 
   return (
     <Header>
-        <Lo
+        <Logo
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}>
@@ -30,7 +30,7 @@ export default function NavBar() {
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
               />
-        </Flex>
+        </Logo>
         <Flex flex={{ base:1 }} justify={{ base: 'center', md: 'start' }}>
           <span>{greetingMessage}</span>
         </Flex>

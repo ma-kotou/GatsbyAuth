@@ -52,11 +52,11 @@ const Skill = () => {
               )
             })}
             <ImageWrap>
-              <StaticImage src="../images/html.png" width={100}/>
-              <StaticImage src="../images/css.png" width={100} />
-              <StaticImage src="../images/js.png" width={120} />
-              <StaticImage src="../images/ts.png" width={120} />
-              <StaticImage src="../images/github-mark.png" width={120} />
+              <StaticImage src='../images/html.png' width={100}/>
+              <StaticImage src='../images/css.png' width={100} />
+              <StaticImage src='../images/js.png' width={120} />
+              <StaticImage src='../images/ts.png' width={120} />
+              <StaticImage src='../images/github-mark.png' width={120} />
               <StaticImage src="../images/php.png" width={150}/>
               <StaticImage src="../images/react.png" width={120} />
               <StaticImage src="../images/next.png" width={150} />
