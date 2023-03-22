@@ -1,28 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout } from "../services/auth"
-import {
-  Box,
-  Flex,
-  Text,
-  IconButton,
-  Button,
-  Stack,
-  Collapse,
-  Icon,
-  Popover,
-  useColorModeValue,
-  useBreakpointValue,
-  useDisclosure,
-  } from "@chakra-ui/react"
-
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from "@chakra-ui/icons";
-
+import { val } from "./variable"
 
 
 export default function NavBar() {
@@ -38,19 +17,8 @@ export default function NavBar() {
 
 
   return (
-    <Box as='header'>
-      <Flex
-        bg={useColorModeValue('white','gray.800')}
-        color={useColorModeValue('gray.600',' white')}
-        minH={'60px'}
-        py={{ base: 2}}
-        px={{ base: 4}}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200','gray.900')}
-        align={'center'}
-        >
-        <Flex
+    <Header>
+        <Lo
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}>
@@ -86,7 +54,13 @@ export default function NavBar() {
           </Button>
         ) : null}
       </nav>
-      </Flex>
-    </Box>
+    </Header>
   )
 }
+
+const Header = styled.header`
+  height: ${val.s80};
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+`

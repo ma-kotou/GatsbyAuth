@@ -1,14 +1,15 @@
 /* colors */
 export const val = {
-  pink: '#FF6C9C',
-  black: '#33272a',
+  pink: '#bf5387',
+  black: '#1f2937',
   blackRGBA: 'rgba(0,0,0,.2)',
   lightGray: '#ddd',
-  darkGray: '#6A6669',
+  darkGray: '#6b7280',
   white: '#f4f4f4',
   yellow: '#FFD561',
   mint: '#4FB2C0',
   red: '#B61A24',
+  gray02: 'f3f4f6',
 
 
 /* fontSize margin padding */
@@ -19,6 +20,7 @@ export const val = {
   s120: '7.5rem',
   s104: '6.5rem',
   s88: '5.5rem',
+  s80: '5rem',
   s72: '4.5rem',
   s64: '4rem',
   s56: '3.5rem',
