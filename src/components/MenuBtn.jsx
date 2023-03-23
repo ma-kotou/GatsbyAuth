@@ -1,7 +1,7 @@
 import React from 'react'
 import { val } from '../components/variable.js'
 import { slide as Menu } from "react-burger-menu"
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+//import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 

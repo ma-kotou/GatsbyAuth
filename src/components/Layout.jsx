@@ -157,6 +157,9 @@ const styles = css`
   .tl-edges{
     overflow-x: initial!important;
   }
+  .tl-wrapper{
+    float: none;
+  }
 `
 
 export default Layout;

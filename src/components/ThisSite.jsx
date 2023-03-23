@@ -1,10 +1,11 @@
 import React from 'react'
 import Title from './Title.jsx'
 import styled from '@emotion/styled'
-import { IconContext } from "react-icons"
-import { AiFillGithub } from "react-icons/ai"
-import Container from './Container'
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
 import { Link } from 'gatsby'
+import {
+  Container,
+} from '@chakra-ui/react'
 
 const ThisSite = (props) => {
 

@@ -1,11 +1,12 @@
 import * as React from 'react';
-import Layout from './layout';
-import Seo from "./seo"
+import Seo from "../components/seo"
 import { motion } from "framer-motion"
 import styled from '@emotion/styled';
-import { val } from './variable.js';
-import Title from "./Title"
-import Container from './Container'
+import { val } from '../components/variable.js';
+import Title from "../components/Title"
+import {
+  Container,
+} from '@chakra-ui/react'
 
 const History = () => {
 

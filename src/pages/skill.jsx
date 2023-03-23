@@ -1,10 +1,12 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import styled from '@emotion/styled'
-import { val } from './variable.js'
-import Title from "./Title"
-import { GatsbyImage } from 'gatsby-plugin-image'
-import Container from './Container'
+import { val } from '../components/variable.js'
+import Title from "../components/Title"
+import { StaticImage } from 'gatsby-plugin-image'
+import {
+  Container,
+} from '@chakra-ui/react'
 
 const Skill = () => {
   const frontendTexts = ([

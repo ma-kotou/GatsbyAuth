@@ -36,5 +36,21 @@ module.exports = {
         resetCSS: true,
         isUsingColorMode: true,
       }
-    }],
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`,`.md`],
+          gatsbyRemarkPlugins: [
+          {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 680,
+                linkImagesToOriginal: true,
+              },
+            },
+        ],
+      },
+    },
+  ],
 }

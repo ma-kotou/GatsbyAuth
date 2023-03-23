@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
-import { IconContext } from "react-icons"
-import { BiTime, BiLinkExternal } from "react-icons/bi"
+//import { IconContext } from "react-icons"
+import { BiTime } from "@react-icons/all-files/bi/BiTime"
+import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal"
 import { val } from '../components/variable.js'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { motion } from "framer-motion"
 import Title from "./Title"
-import {gsap} from "gsap";
 
 const Website = () => {
 
@@ -50,9 +50,9 @@ const Website = () => {
               image={getImage(edge.node.frontmatter.hero_image)}
               alt={edge.node.frontmatter.slug} />
             </div>
-            <IconContext.Provider value={{ className: 'rightArrow' }}>
+            {/* <IconContext.Provider value={{ className: 'rightArrow' }}> */}
             <Hover>view<BiLinkExternal /></Hover>
-            </IconContext.Provider>
+            {/* </IconContext.Provider> */}
             <Time><BiTime />{edge.node.frontmatter.date}</Time>
             <WorksTitle>
                 {edge.node.frontmatter.title}

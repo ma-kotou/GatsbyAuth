@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { val } from './variable.js'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+//import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const AnimationLink = (props) => {
   <Item>
