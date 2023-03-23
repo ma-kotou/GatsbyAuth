@@ -1,14 +1,16 @@
 import React from "react"
 import { Container } from "@chakra-ui/react"
 
-const Section = (children) => {
+const Section = (props, children) => {
   return (
     <Container
       as={'section'}
-      py={10}>
-        {children}
+      mt={'104px'}
+      {...props}
+      >
+        {children.children}
       </Container>
   )
 }
 
-export default <Section></Section>
+export default Section

@@ -9,6 +9,7 @@ import { val } from '../components/variable.js'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { motion } from "framer-motion"
 import Title from "./Title"
+import Section from "./Section"
 
 const Website = () => {
 
@@ -39,7 +40,7 @@ const Website = () => {
         }
       `)
   return (
-      <>
+      <Section>
         <Title text="WebSite"/>
         <Inner>
         {data.allMdx.edges.map((edge) => (
@@ -61,7 +62,7 @@ const Website = () => {
         </AniLink>
         ))}
         </Inner>
-      </>
+      </Section>
   );
 };
 

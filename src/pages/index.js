@@ -23,8 +23,6 @@ export default function Home() {
         <Box>
           <Mv />
         </Box>
-        <IndexMessage />
-        <ThisSite />
         </>
   )
 }

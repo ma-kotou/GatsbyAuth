@@ -5,24 +5,15 @@ import { isLoggedIn, logout } from "../services/auth"
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
 import {
   Heading,
-  Box,
   Flex,
-  Text,
   IconButton,
-  Stack,
-  Collapse,
-  Icon,
-  Popover,
   useColorModeValue,
-  useBreakpointValue,
-  useDisclosure,
+  useDisclosure
   } from "@chakra-ui/react"
 
   import {
     HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
+    CloseIcon
   } from "@chakra-ui/icons";
 
 
@@ -44,7 +35,6 @@ export default function Header() {
         bg={useColorModeValue('white','gray.800')}
         color={useColorModeValue('gray.600',' white')}
         minH={'80px'}
-        pl={'4'}
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200','gray.900')}
@@ -52,18 +42,17 @@ export default function Header() {
         justifyContent={'space-between'}
         >
         <Flex
-          minWidth={'360px'}
           align={'center'}
           justifyContent={'space-between'}
           >
-          <Heading as='h1'
-            fontSize='32px'
-            fontWeight='bold'
+          <Heading as={'h1'}
+            fontSize={'32px'}
+            fontWeight={'bold'}
+            pl={'4'}
           >
             <Link to="/">MEE.</Link>
           </Heading>
             <Link to="/skill">skill</Link>
-            <Link to="/history">history</Link>
         </Flex>
       <Flex
         as={'nav'}
