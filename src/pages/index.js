@@ -3,16 +3,8 @@ import { Link } from "gatsby"
 import { isLoggedIn } from "../services/auth"
 import Mv from "../components/Mv"
 import IndexMessage from "../components/IndexMessage"
-import {
-  Box,
-  IconButton,
-  useBreakpointValue,
-  Stack,
-  Heading,
-  Text,
-  Flex,
-  Container,
-} from '@chakra-ui/react'
+import ThisSite from "../components/ThisSite"
+import { Box } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -32,6 +24,7 @@ export default function Home() {
           <Mv />
         </Box>
         <IndexMessage />
+        <ThisSite />
         </>
   )
 }

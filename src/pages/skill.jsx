@@ -4,9 +4,7 @@ import styled from '@emotion/styled'
 import { val } from '../components/variable.js'
 import Title from "../components/Title"
 import { StaticImage } from 'gatsby-plugin-image'
-import {
-  Container,
-} from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 
 const Skill = () => {
   const frontendTexts = ([

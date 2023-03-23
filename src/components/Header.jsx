@@ -1,4 +1,5 @@
 import React from "react"
+import HeaderBtn from "./HeaderButton.jsx"
 import { Link, navigate } from "gatsby"
 import { isLoggedIn, logout } from "../services/auth"
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
@@ -8,7 +9,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -69,33 +69,25 @@ export default function Header() {
         as={'nav'}
         align={'center'}
         fontWeight={'bold'}
-        minWidth={'180px'}
         justifyContent={'space-between'}>
         <Link to={'https://github.com/ma-kotou'}><AiFillGithub color={'blackPrimary'} fontSize={'32px'} /></Link>
-        <Button
+        <HeaderBtn
           bg={'blackPrimary'}
-          w={'132px'}
-          h={'80px'}
-          color={'#fff'}
-          borderRadius={'0'}
-          as={'a'}
           href={'/app/works'}
-          >
-          works
-        </Button>
+          text='Works'
+          ml={'4'}
+          />
         {isLoggedIn() ? (
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
+          <HeaderBtn
             variant={'link'}
             href={'/'}
+            bg={'primary.500'}
+            text='LogOut'
             onClick={event => {
               event.preventDefault()
               logout(() => navigate(`/app/login`))
             }}>
-            LogOut
-          </Button>
+          </HeaderBtn>
         ) : null}
         <Flex
           flex={{ base: 1, md: 'auto' }}
