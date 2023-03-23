@@ -1,25 +1,37 @@
 import React from "react"
 import { Link } from "gatsby"
-import { getUser, isLoggedIn } from "../services/auth"
-import Layout from "../components/Layout"
+import { isLoggedIn } from "../services/auth"
+import Mv from "../components/Mv"
+import IndexMessage from "../components/IndexMessage"
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Stack,
+  Heading,
+  Text,
+  Flex,
+  Container,
+} from '@chakra-ui/react'
 
 export default function Home() {
   return (
-      <Layout>
-        <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
-        <p>
+        <>
+        <Box>
           {isLoggedIn() ? (
             <>
-              You are logged in, so check your{" "}
-              <Link to="/app/profile">profile</Link>
+              <Link to="/app/Works">ログインしています。worksより制作実績をご覧ください。</Link>
             </>
             ) : (
             <>
-            You should <Link to="/app/login">log in</Link> to see restricted
-            content
+              <Link to="/app/login">worksよりログインすると制作実績をご覧頂けます。</Link>
           </>
           )}
-        </p>
-      </Layout>
+        </Box>
+        <Box>
+          <Mv />
+        </Box>
+        <IndexMessage />
+        </>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { getUser } from "../services/auth"
 
-const Profile = () => (
+const Works = () => (
   <>
     <h1>Your profile</h1>
     <ul>
@@ -11,4 +11,4 @@ const Profile = () => (
   </>
 )
 
-export default Profile
+export default Works

@@ -2,8 +2,7 @@ import React, {useState} from 'react'
 import Footer from './Footer'
 import { Global, css } from '@emotion/react'
 import { val } from './variable.js'
-import ScrollDown from './ScrollDown'
-import NavBar from "./nav-bar"
+import Header from "./Header"
 
 
 const Layout = ({ children }) => {
@@ -11,9 +10,8 @@ const Layout = ({ children }) => {
     <>
       <Global styles={styles} />
         <main>
-          <NavBar/>
+        <Header/>
           {children}
-          <ScrollDown />
         </main>
         <Footer />
     </>

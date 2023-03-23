@@ -31,7 +31,7 @@ class Login extends React.Component {
         minH={'calc(100vh - 60px)'}
         align={'center'}
         justify={'center'}
-        bg={'gray.50'}>
+        bg={'grayPrimary'}>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Box
             round={'lg'}
@@ -43,13 +43,14 @@ class Login extends React.Component {
               method="post"
               onSubmit={event => {
                 this.handleSubmit(event)
-                navigate(`/app/profile`)
+                navigate(`/app/works`)
               }}
             >
               <FormControl id="username">
-                <FormLabel m={0}>
+                <FormLabel m={0} mb={4}>
                   Username
                   <Input
+                    focusBorderColor="primary.500"
                     type="text"
                     name="username"
                     onChange={this.handleUpdate}
@@ -57,9 +58,10 @@ class Login extends React.Component {
                 </FormLabel>
               </FormControl>
               <FormControl id="password">
-                <FormLabel m={0}>
+                <FormLabel m={0} mb={8}>
                   Password
                   <Input
+                    focusBorderColor="primary.500"
                     type="password"
                     name="password"
                     onChange={this.handleUpdate}
@@ -78,11 +80,11 @@ class Login extends React.Component {
                 onChange={this.handleUpdate}
                 width={'100%'}
                 mt={4}
-                bg={'blue.400'}
+                bg={'pink.500'}
                 size={'lg'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500'
+                  bg: 'pink.300'
                 }}>
                   Sign in
                 </Button>
