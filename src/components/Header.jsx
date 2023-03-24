@@ -62,7 +62,7 @@ export default function Header() {
         <Link to={'https://github.com/ma-kotou'}><AiFillGithub color={'blackPrimary'} fontSize={'32px'} /></Link>
         <HeaderBtn
           bg={'blackPrimary'}
-          href={'/app/works'}
+          href={'/app/Website'}
           text='Works'
           ml={'4'}
           />

@@ -2,7 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 import Layout from "../components/Layout"
 import PrivateRoute from "../components/privateRoute"
-import Works from "../components/works"
+import Works from "../components/Website"
 import Login from "../components/login"
 
 const App = () => (

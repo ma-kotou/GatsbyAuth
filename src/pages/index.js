@@ -12,7 +12,7 @@ export default function Home() {
         <Box>
           {isLoggedIn() ? (
             <>
-              <Link to="/app/Works">ログインしています。worksより制作実績をご覧ください。</Link>
+              <Link to="/app/posts">ログインしています。worksより制作実績をご覧ください。</Link>
             </>
             ) : (
             <>
