@@ -93,7 +93,8 @@ const Skill = () => {
               )
             })}
             <ImageWrap>
-              <StaticImage src="../images/figma.png" width={250}/>
+              <StaticImage
+                src="../images/figma.png" width={250}/>
               <StaticImage src="../images/ps.png" width={150}/>
               <StaticImage src="../images/ai.png" width={150}/>
               <StaticImage src="../images/xd.png" width={150}/>

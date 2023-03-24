@@ -26,26 +26,20 @@ const settings = {
   autoplay: true,
   speed: 500,
   autoplaySpeed: 3000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  dots: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   dotClass: 'slick-dots',
   pauseOnHover: true,
   focusOnSelect: true,
   centerMode: true,
+  centerPadding: '60px'
 };
 
 export default function CaptionCarousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
   const [slider, setSlider] = React.useState(0)
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
   const cards = [
     {
       title: 'Design',
@@ -128,7 +122,7 @@ export default function CaptionCarousel() {
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
-                w={'full'}
+                w={'600px'}
                 maxW={'lg'}
                 position="absolute"
                 top="50%"
